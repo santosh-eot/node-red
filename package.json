@@ -1,0 +1,11 @@
+{
+    "name": "node-red-project",
+    "description": "A Node-RED Project",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "java": "^0.14.0",
+        "jdbc": "^0.7.6",
+        "node-red-contrib-opcua": "~0.2.320"
+    }
+}

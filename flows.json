@@ -1,0 +1,86 @@
+[
+    {
+        "id": "49f5a4035e662a1b",
+        "type": "tab",
+        "label": "2.1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "cc38ed7d1f8188c1",
+        "type": "inject",
+        "z": "49f5a4035e662a1b",
+        "name": "Read Temperature",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=1;i=1003;datatype=Double",
+        "payload": "",
+        "payloadType": "num",
+        "x": 360,
+        "y": 140,
+        "wires": [
+            [
+                "0bd861f5c8def147"
+            ]
+        ]
+    },
+    {
+        "id": "0bd861f5c8def147",
+        "type": "OpcUa-Client",
+        "z": "49f5a4035e662a1b",
+        "endpoint": "c18a117fc536cd16",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "useTransport": false,
+        "maxChunkCount": 1,
+        "maxMessageSize": 8192,
+        "receiveBufferSize": 8192,
+        "sendBufferSize": 8192,
+        "name": "",
+        "x": 600,
+        "y": 140,
+        "wires": [
+            [
+                "5da5a7fb9c806afa"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "5da5a7fb9c806afa",
+        "type": "debug",
+        "z": "49f5a4035e662a1b",
+        "name": "debug 5",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 140,
+        "wires": []
+    }
+]
